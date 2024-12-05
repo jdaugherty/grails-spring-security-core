@@ -14,7 +14,7 @@ if (isReleaseVersion) {
         String nexusUser = findProperty('sonatypeUsername')
         String nexusPass = findProperty('sonatypePassword')
         String nexusStagingProfileId = findProperty('sonatypeStagingProfileId')
-        String nexusUrl = findProperty('sonatypeNexusUrl') ?: 'https://s01.oss.sonatype.org/service/local/'
+        String nexusUrl = uri("https://s01.oss.sonatype.org/service/local/")
         repositories {
             sonatype {
                 nexusUrl = uri(nexusUrl)
