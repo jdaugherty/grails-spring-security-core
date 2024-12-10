@@ -1,5 +1,6 @@
 [versions]
 asset-pipeline = '5.0.1'
+bytebuddy = '1.15.10'
 commons-text = '1.12.0'
 ehcache = '3.10.8'
 geb = '7.0'
@@ -27,6 +28,7 @@ tomcat = '10.1.29'
 [libraries]
 commons-text = { module = 'org.apache.commons:commons-text', version.ref = 'commons-text' }
 ehcache = { module = 'org.ehcache:ehcache', version.ref = 'ehcache' }
+bytebuddy = { module = 'net.bytebuddy:byte-buddy', version.ref = 'bytebuddy' }
 geb-core = { module = 'org.gebish:geb-core', version.ref = 'geb' }
 geb-spock = { module = 'org.gebish:geb-spock', version.ref = 'geb' }
 gorm-hibernate5 = { module = 'org.grails.plugins:hibernate5', version.ref = 'gorm-hibernate5' }

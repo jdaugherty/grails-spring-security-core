@@ -47,6 +47,7 @@ dependencies {
 	testImplementation libs.spring.test
 	testImplementation libs.spring.security.config
 
+	testRuntimeOnly libs.bytebuddy
 	testRuntimeOnly libs.slf4j.nop // Prevents warnings about missing slf4j implementation during tests
 }
 
