@@ -11,6 +11,7 @@ selenium-safari = '4.19.1'
 [libraries]
 commons-text = { module = 'org.apache.commons:commons-text' }
 ehcache = { module = 'org.ehcache:ehcache', version.ref = 'ehcache' }
+bytebuddy = { module = 'net.bytebuddy:byte-buddy' }
 geb-core = { module = 'org.gebish:geb-core' }
 geb-spock = { module = 'org.gebish:geb-spock' }
 gorm-hibernate5 = { module = 'org.grails.plugins:hibernate5' }
