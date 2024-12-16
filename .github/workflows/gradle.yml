@@ -34,6 +34,7 @@ jobs:
   functional-test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         test-config: [ 'static', 'annotation', 'requestmap', 'basic', 'basicCacheUsers', 'misc', 'putWithParams', 'bcrypt', 'issue503' ]
     steps:
