@@ -25,6 +25,7 @@ grails-i18n = { module = 'org.grails:grails-plugin-i18n' }
 grails-interceptors = { module = 'org.grails:grails-plugin-interceptors' }
 grails-mimetypes = { module = 'org.grails:grails-plugin-mimetypes' }
 grails-plugin-async = { module = 'org.grails.plugins:async', version.ref = 'grails-async-and-events' }
+grails-plugin-events = { module = 'org.grails.plugins:events', version.ref = 'grails-async-and-events' }
 grails-rest = { module = 'org.grails:grails-plugin-rest' }
 grails-services = { module = 'org.grails:grails-plugin-services' }
 grails-testing-support-gorm = { module = 'org.grails:grails-gorm-testing-support' }
