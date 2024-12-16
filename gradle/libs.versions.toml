@@ -1,19 +1,15 @@
 [versions]
-asset-pipeline = '5.0.1'
+asset-pipeline = '5.0.4'
 ehcache = '3.10.8'
 grails = '7.0.0-SNAPSHOT'
 grails-async-and-events = '7.0.0-SNAPSHOT'
-groovy = '4.0.22'
+groovy = '4.0.24'
 micronaut = '4.5.3'
-selenium = '4.19.1'
-selenium-safari = '4.19.1'
 
 [libraries]
 commons-text = { module = 'org.apache.commons:commons-text' }
 ehcache = { module = 'org.ehcache:ehcache', version.ref = 'ehcache' }
 bytebuddy = { module = 'net.bytebuddy:byte-buddy' }
-geb-core = { module = 'org.gebish:geb-core' }
-geb-spock = { module = 'org.gebish:geb-spock' }
 gorm-hibernate5 = { module = 'org.grails.plugins:hibernate5' }
 grails-asset-pipeline = { module = 'com.bertramlabs.plugins:asset-pipeline-grails', version.ref = 'asset-pipeline' }
 grails-bom = { module = 'org.grails:grails-bom', version.ref = 'grails' }
@@ -44,18 +40,9 @@ h2database = { module = 'com.h2database:h2' }
 micronaut-httpclient = { module = 'io.micronaut:micronaut-http-client', version.ref = 'micronaut' }
 micronaut-inject-groovy = { module = 'io.micronaut:micronaut-inject-groovy', version.ref = 'micronaut' }
 micronaut-jackson-databind = { module = 'io.micronaut:micronaut-jackson-databind', version.ref = 'micronaut' }
-selenium-api = { module = 'org.seleniumhq.selenium:selenium-api', version.ref = 'selenium' }
-selenium-chrome-driver = { module = 'org.seleniumhq.selenium:selenium-chrome-driver', version.ref = 'selenium' }
-selenium-chromium-driver = { module = 'org.seleniumhq.selenium:selenium-chromium-driver', version.ref = 'selenium' }
-selenium-devtools-v85 = { module = 'org.seleniumhq.selenium:selenium-devtools-v85', version.ref = 'selenium' }
-selenium-firefox-driver = { module = 'org.seleniumhq.selenium:selenium-firefox-driver', version.ref = 'selenium' }
-selenium-http = { module = 'org.seleniumhq.selenium:selenium-http', version.ref = 'selenium' }
-selenium-json = { module = 'org.seleniumhq.selenium:selenium-json', version.ref = 'selenium' }
-selenium-remote-driver = { module = 'org.seleniumhq.selenium:selenium-remote-driver', version.ref = 'selenium' }
-selenium-safari-driver = { module = 'org.seleniumhq.selenium:selenium-safari-driver', version.ref = 'selenium-safari' }
-selenium-support = { module = 'org.seleniumhq.selenium:selenium-support', version.ref = 'selenium' }
 slf4j-nop = { module = 'org.slf4j:slf4j-nop' }
 spock-core = { module = 'org.spockframework:spock-core' }
+geb-plugin = { module = 'org.grails.plugins:geb' }
 spring-beans = { module = 'org.springframework:spring-beans' }
 spring-core = { module = 'org.springframework:spring-core' }
 spring-context-core = { module = 'org.springframework:spring-context' }
@@ -76,6 +63,4 @@ springboot-starter-tomcat = { module = 'org.springframework.boot:spring-boot-sta
 tomcat-jdbc = { module = 'org.apache.tomcat:tomcat-jdbc' }
 
 [bundles]
-geb = ['geb-core', 'geb-spock']
 grails-testing-support = ['grails-testing-support-gorm', 'grails-testing-support-web', 'springboot-starter-test']
-selenium = ['selenium-api', 'selenium-chrome-driver', 'selenium-chromium-driver', 'selenium-devtools-v85', 'selenium-firefox-driver', 'selenium-http', 'selenium-json', 'selenium-remote-driver', 'selenium-safari-driver', 'selenium-support']

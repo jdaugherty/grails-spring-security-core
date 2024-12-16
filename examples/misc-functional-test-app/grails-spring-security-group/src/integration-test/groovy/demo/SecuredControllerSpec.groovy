@@ -1,12 +1,12 @@
 package demo
 
-import geb.spock.GebSpec
+import grails.plugin.geb.ContainerGebSpec
 import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
 
 @Rollback
 @Integration(applicationClass = Application)
-class SecuredControllerSpec extends GebSpec {
+class SecuredControllerSpec extends ContainerGebSpec {
 
     def setup() {
         browser.baseUrl = "http://localhost:${serverPort}/"
