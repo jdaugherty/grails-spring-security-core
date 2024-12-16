@@ -1,5 +1,8 @@
 package specs
 
+import grails.testing.mixin.integration.Integration
+
+@Integration
 abstract class AbstractHyphenatedSecuritySpec extends AbstractSecuritySpec {
 
 	protected void resetDatabase() {

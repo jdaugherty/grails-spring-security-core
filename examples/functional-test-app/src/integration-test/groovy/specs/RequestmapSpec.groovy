@@ -1,12 +1,14 @@
 package specs
 
 import com.testapp.TestDataService
+import grails.testing.mixin.integration.Integration
 import pages.requestmap.CreateRequestmapPage
 import pages.requestmap.EditRequestmapPage
 import pages.requestmap.ListRequestmapPage
 import pages.requestmap.ShowRequestmapPage
 import spock.lang.IgnoreIf
 
+@Integration
 @IgnoreIf({ System.getProperty('TESTCONFIG') != 'requestmap' })
 class RequestmapSpec extends AbstractSecuritySpec {
 

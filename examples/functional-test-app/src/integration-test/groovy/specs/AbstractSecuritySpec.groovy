@@ -1,8 +1,9 @@
 package specs
 
 import com.testapp.TestDataService
+import functional.test.app.Application
 import geb.driver.CachingDriverFactory
-import geb.spock.GebReportingSpec
+import grails.plugin.geb.ContainerGebSpec
 import grails.plugin.springsecurity.SpringSecurityCoreGrailsPlugin
 import grails.plugin.springsecurity.SpringSecurityUtils
 import grails.testing.mixin.integration.Integration
@@ -10,11 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.crypto.password.MessageDigestPasswordEncoder
 import pages.LoginPage
 import spock.lang.Shared
-import spock.lang.Stepwise
 
-@Integration(applicationClass = functional.test.app.Application)
-@Stepwise
-abstract class AbstractSecuritySpec extends GebReportingSpec {
+@Integration(applicationClass = Application)
+abstract class AbstractSecuritySpec extends ContainerGebSpec {
 
 	private @Shared boolean databaseReset = false
 
@@ -22,12 +21,6 @@ abstract class AbstractSecuritySpec extends GebReportingSpec {
 	TestDataService testDataService
 
 	void setup() {
-		if ( hasProperty('serverPort') ) {
-			browser.baseUrl = "http://localhost:${getProperty('serverPort')}/"
-		} else {
-			browser.baseUrl = 'http://localhost:8080/'
-		}
-
 		logout()
 
 		// call resetDatabase() once per suite, before the first test; would

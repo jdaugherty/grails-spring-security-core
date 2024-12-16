@@ -1,5 +1,6 @@
 package specs
 
+import grails.testing.mixin.integration.Integration
 import pages.LoginPage
 import pages.role.CreateRolePage
 import pages.role.ListRolePage
@@ -9,6 +10,7 @@ import pages.user.ListUserPage
 import pages.user.ShowUserPage
 import spock.lang.IgnoreIf
 
+@Integration
 @IgnoreIf({ System.getProperty('TESTCONFIG') != 'basic' })
 class BasicAuthSecuritySpec extends AbstractSecuritySpec {
 

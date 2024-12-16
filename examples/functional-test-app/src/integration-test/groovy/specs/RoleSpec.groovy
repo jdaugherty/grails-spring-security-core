@@ -1,11 +1,13 @@
 package specs
 
+import grails.testing.mixin.integration.Integration
 import pages.role.CreateRolePage
 import pages.role.EditRolePage
 import pages.role.ListRolePage
 import pages.role.ShowRolePage
 import spock.lang.IgnoreIf
 
+@Integration
 @IgnoreIf({ !(
 		System.getProperty('TESTCONFIG') == 'annotation' ||
         System.getProperty('TESTCONFIG') == 'basic' ||
