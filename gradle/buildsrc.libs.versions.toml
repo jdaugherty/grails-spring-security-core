@@ -1,6 +1,6 @@
 [versions]
 asciidoctorj = '4.0.3'
-asset-pipeline-gradle = '5.0.1'
+asset-pipeline-gradle = '5.0.4'
 grails-gradle-plugin = '7.0.0-SNAPSHOT'
 webdriver-binaries = '3.2'
 spock = '2.3-groovy-3.0'
