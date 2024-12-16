@@ -3,14 +3,14 @@ on:
   release:
     types: [published]
 env:
-  GIT_USER_NAME: puneetbehl
-  GIT_USER_EMAIL: behlp@unityfoundation.io
+  GIT_USER_NAME: 'grails-build'
+  GIT_USER_EMAIL: 'grails-build@users.noreply.github.com'
 jobs:
   release:
     runs-on: ubuntu-latest
     env:
-      GIT_USER_NAME: puneetbehl
-      GIT_USER_EMAIL: behlp@unityfoundation.io
+      GIT_USER_NAME: 'grails-build'
+      GIT_USER_EMAIL: 'grails-build@users.noreply.github.com'
     steps:
       - uses: actions/checkout@v4
       - uses: gradle/wrapper-validation-action@v2
