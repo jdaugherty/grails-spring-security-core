@@ -15,7 +15,6 @@ env:
 
 jobs:
   core-tests:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +32,6 @@ jobs:
             -Dgeb.env=chromeHeadless
 
   functional-test:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     strategy:
       matrix:
