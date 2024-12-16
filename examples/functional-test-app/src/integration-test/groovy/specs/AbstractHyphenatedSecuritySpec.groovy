@@ -14,10 +14,6 @@ abstract class AbstractHyphenatedSecuritySpec extends AbstractSecuritySpec {
 		getContent 'hack/get-session-value?name=' + name
 	}
 
-	protected void login(String username) {
-		super.login username, 'password'
-	}
-
 	protected String getUserProperty(String user, String propertyName) {
 		getContent "hack/get-user-property?user=$user&propName=$propertyName"
 	}

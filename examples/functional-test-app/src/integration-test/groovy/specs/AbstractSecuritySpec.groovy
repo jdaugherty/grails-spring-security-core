@@ -20,7 +20,7 @@ abstract class AbstractSecuritySpec extends ContainerGebSpec {
 	@Autowired
 	TestDataService testDataService
 
-	void setup() {
+	def setup() {
 		logout()
 
 		// call resetDatabase() once per suite, before the first test; would
@@ -56,7 +56,7 @@ abstract class AbstractSecuritySpec extends ContainerGebSpec {
 		browser.driver.pageSource
 	}
 
-	protected void login(String user, String pwd, boolean remember = false) {
+	protected void login(String user, String pwd = 'password', boolean remember = false) {
 		to LoginPage
 		username = user
 		password = pwd
@@ -69,6 +69,7 @@ abstract class AbstractSecuritySpec extends ContainerGebSpec {
 	protected void logout() {
 		go SpringSecurityUtils.securityConfig.logout.filterProcessesUrl
 		browser.clearCookies()
+		browser.go("/")
 	}
 
 	protected void assertContentContains(String expected) {
