@@ -9,7 +9,7 @@ import grails.gorm.transactions.Rollback
 class SecuredControllerSpec extends ContainerGebSpec {
 
     def setup() {
-        browser.baseUrl = "http://localhost:${serverPort}/"
+        browser.go('/')
         if ( !User.findByUsername('sherlock') ) {
             final boolean flush = true
             final boolean failOnError = true

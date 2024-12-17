@@ -7,7 +7,7 @@ import grails.testing.mixin.integration.Integration
 class SecuredControllerSpec extends ContainerGebSpec {
 
     def setup() {
-        browser.baseUrl = "http://localhost:${serverPort}/"
+        browser.go('/')
     }
 
     def "test RoleHierarchyEntry lifecycle"() {
