@@ -117,7 +117,6 @@ class BasicAuthCacheUsersSecuritySpec extends AbstractSecuritySpec {
 		userRows.size() == 2
 	}
 
-	@IgnoreIf({ !System.getProperty('geb.env') })
 	void 'check userDetails caching'() {
 
 		when:

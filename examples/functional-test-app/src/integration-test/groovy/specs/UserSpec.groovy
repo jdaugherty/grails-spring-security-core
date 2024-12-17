@@ -89,7 +89,6 @@ class UserSpec extends AbstractSecuritySpec {
 		at ShowUserPage
 	}
 
-	@IgnoreIf({ !System.getProperty('geb.env') })
 	void 'delete user'() {
 		when:
 		to ListUserPage

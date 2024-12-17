@@ -48,7 +48,6 @@ jobs:
         with:
           arguments: |
             examples-functional-test-app:check 
-            -Dgeb.env=chromeHeadless 
             -DTESTCONFIG=${{ matrix.test-config }}
 
   build:
@@ -68,7 +67,6 @@ jobs:
           arguments: |
             spring-security-core:build 
             --refresh-dependencies
-            -Dgeb.env=chromeHeadless
             -x javadoc
 
       - name: Publish Snapshot artifacts to Artifactory (repo.grails.org)

@@ -77,7 +77,6 @@ class RequestmapSpec extends AbstractSecuritySpec {
 		configAttribute == 'ROLE_ADMINX'
 	}
 
-	@IgnoreIf({ !System.getProperty('geb.env') })
 	void 'delete requestmap'() {
 		when:
 		go 'testRequestmap/list?max=100'
