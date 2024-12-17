@@ -8,8 +8,7 @@ import grails.gorm.transactions.Rollback
 @Integration(applicationClass = Application)
 class SecuredControllerSpec extends ContainerGebSpec {
 
-    def setup() {
-        browser.go('/')
+    void setupData() {
         if ( !User.findByUsername('sherlock') ) {
             final boolean flush = true
             final boolean failOnError = true
@@ -34,6 +33,9 @@ class SecuredControllerSpec extends ContainerGebSpec {
     }
 
     def "test login as sherlock, sherlock belongs to detective groups. All detectives have the role ADMIN"() {
+        given:
+        setupData()
+
         when:
         to SecuredPage
 
@@ -51,6 +53,9 @@ class SecuredControllerSpec extends ContainerGebSpec {
     }
 
     def "test login as watson, watson belongs to detective groups. All detectives have the role ADMIN"() {
+        given:
+        setupData()
+
         when:
         to SecuredPage
 
