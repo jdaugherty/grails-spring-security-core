@@ -6,10 +6,6 @@ import grails.testing.mixin.integration.Integration
 @Integration(applicationClass = Application)
 class SecuredControllerSpec extends ContainerGebSpec {
 
-    def setup() {
-        browser.go('/')
-    }
-
     def "test RoleHierarchyEntry lifecycle"() {
         when:
         to SecuredPage
