@@ -331,8 +331,6 @@ class BasicAuthSecuritySpec extends AbstractSecuritySpec {
 	}
 
 	private void getWithoutAuth(String uri) {
-		def url = new URI(getBaseUrlRequired()).resolve(new URI(uri)).toURL()
-		connection = url.openConnection()
-		connection.instanceFollowRedirects = false
+		connection = download("/${uri}")
 	}
 }
